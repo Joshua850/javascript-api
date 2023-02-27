@@ -63,7 +63,7 @@ app.put("/api/data/:id",async(req,res)=>{
 
 const start = async () => {
   try {
-    await mongoose.connect("mongodb+srv://admin:admin@cats.begs5qd.mongodb.net/?retryWrites=true&w=majority");
+    await mongoose.connect("");
     app.listen(3000, () => console.log("Server started on port 3000"));
   } catch (error) {
     console.error(error);
