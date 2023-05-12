@@ -29,6 +29,7 @@ app.get("/api/data/:name", async (req, res) => {
 
 app.post("/api/data", async (req, res) => {
   try {
+   
     const newDog = new Dog({ ...req.body });
     console.log(newDog);
     const insertedDog = await newDog.save();
@@ -55,6 +56,7 @@ app.put("/api/data/:id",async(req,res)=>{
     await Dog.updateOne({ id }, req.body);
     const updatedDog = await Dog.findById(id);
     res.status(200).json(updatedDog);
+    
     }catch(err){
         res.send(err).status(404)
     }
@@ -63,12 +65,25 @@ app.put("/api/data/:id",async(req,res)=>{
 
 const start = async () => {
   try {
-    await mongoose.connect("");
+    await mongoose.connect("mongodb+srv://admin:admin@cats.begs5qd.mongodb.net/?retryWrites=true&w=majority");
     app.listen(3000, () => console.log("Server started on port 3000"));
   } catch (error) {
     console.error(error);
     process.exit(1);
   }
 };
+const test=()=>{
+  const regex = /uuid=([0-9a-fA-F-]+)&/;
 
-start();
+const string = 'https://test2.davra.com/ui/service-edit?uuid=0fce2afc-98f2-48f9-b3a6-d30938396c9a';
+const match = string.match(regex);
+
+if (match) {
+  console.log(match[1]);
+}
+  }
+
+
+
+
+test();

@@ -1,0 +1,24 @@
+{
+  "name": "javascript-crud",
+  "version": "1.0.0",
+  "description": "Simple api usnig expressJs, node, mongodb and mongoose.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joshua850/javascript-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joshua850/javascript-api/issues"
+  },
+  "homepage": "https://github.com/Joshua850/javascript-api#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.33.0"
+  }
+}
