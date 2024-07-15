@@ -4,6 +4,10 @@ const port = 3000;
 var bodyParser = require("body-parser");
 const { MongoClient } = require("mongodb");
 const mongoose = require("mongoose");
+const cors = require("cors");
+const multer = require("multer");
+const fs = require("fs");
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -29,7 +33,8 @@ app.get("/api/data/:name", async (req, res) => {
 
 app.post("/api/data", async (req, res) => {
   try {
-   
+    console.log(req.body);
+    newItem.img.data = fs.readFileSync(req.files.userPhoto.path);
     const newDog = new Dog({ ...req.body });
     console.log(newDog);
     const insertedDog = await newDog.save();
@@ -50,40 +55,27 @@ app.delete("/api/data/:name", async (req, res) => {
   }
 });
 
-app.put("/api/data/:id",async(req,res)=>{
-    try{
+app.put("/api/data/:id", async (req, res) => {
+  try {
     const { id } = req.params;
     await Dog.updateOne({ id }, req.body);
     const updatedDog = await Dog.findById(id);
     res.status(200).json(updatedDog);
-    
-    }catch(err){
-        res.send(err).status(404)
-    }
-   
-  });
+  } catch (err) {
+    res.send(err).status(404);
+  }
+});
 
 const start = async () => {
   try {
-    await mongoose.connect("mongodb+srv://admin:admin@cats.begs5qd.mongodb.net/?retryWrites=true&w=majority");
+    await mongoose.connect(
+      "mongodb+srv://admin:admin@mydog.xdo3gql.mongodb.net/y"
+    );
     app.listen(3000, () => console.log("Server started on port 3000"));
   } catch (error) {
     console.error(error);
     process.exit(1);
   }
 };
-const test=()=>{
-  const regex = /uuid=([0-9a-fA-F-]+)&/;
 
-const string = 'https://test2.davra.com/ui/service-edit?uuid=0fce2afc-98f2-48f9-b3a6-d30938396c9a';
-const match = string.match(regex);
-
-if (match) {
-  console.log(match[1]);
-}
-  }
-
-
-
-
-test();
+start();
