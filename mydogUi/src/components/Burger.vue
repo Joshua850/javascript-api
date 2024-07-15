@@ -8,7 +8,7 @@
       <nav v-if="isOpen" class="nav-menu">
        
         <router-link to="/create" @click="toggleMenu">Create</router-link>
-        <router-link to="/signin" @click="toggleMenu">Sign In</router-link>
+        <router-link to="/" @click="toggleMenu">home</router-link>
         <router-link to="/find" @click="toggleMenu">Find</router-link>
       </nav>
     </div>
@@ -32,7 +32,6 @@
   <style scoped>
   .burger {
     position: absolute;
-    top: 20px; /* Adjust position */
     right: 20px; /* Adjust position */
     cursor: pointer;
     z-index: 1002; /* Ensure it’s above the menu */

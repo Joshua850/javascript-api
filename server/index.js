@@ -6,7 +6,6 @@ const { MongoClient } = require("mongodb");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const multer = require("multer");
-const fs = require("fs");
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,7 +33,6 @@ app.get("/api/data/:name", async (req, res) => {
 app.post("/api/data", async (req, res) => {
   try {
     console.log(req.body);
-    newItem.img.data = fs.readFileSync(req.files.userPhoto.path);
     const newDog = new Dog({ ...req.body });
     console.log(newDog);
     const insertedDog = await newDog.save();

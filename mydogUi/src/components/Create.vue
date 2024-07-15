@@ -1,35 +1,38 @@
 <template>
-  <div class="create-post">
-    <h2>Create a Dog Posting</h2>
-    <form @submit.prevent="handleSubmit">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" v-model="formData.name" required />
+  <div class="background">
+    <div class="create-post">
+      <h2>Create a Dog Posting</h2>
+      <form @submit.prevent="handleSubmit">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" v-model="formData.name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" v-model="formData.age" required />
+        </div>
+
+        <div class="form-group">
+          <label for="breed">Breed:</label>
+          <input type="text" id="breed" v-model="formData.breed" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Number:</label>
+          <input type="tel" id="contact" v-model="formData.contact" required />
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+
+      <div v-if="submitted" class="confirmation">
+        <p>Your posting has been created successfully!</p>
       </div>
-
-      <div class="form-group">
-        <label for="age">Age:</label>
-        <input type="number" id="age" v-model="formData.age" required />
-      </div>
-
-      <div class="form-group">
-        <label for="breed">Breed:</label>
-        <input type="text" id="breed" v-model="formData.breed" required />
-      </div>
-
-      <div class="form-group">
-        <label for="contact">Contact Number:</label>
-        <input type="tel" id="contact" v-model="formData.contact" required />
-      </div>
-
-      <button type="submit" class="submit-button">Submit</button>
-    </form>
-
-    <div v-if="submitted" class="confirmation">
-      <p>Your posting has been created successfully!</p>
     </div>
   </div>
 </template>
+
 
 <script>
 import axios from 'axios';
@@ -83,13 +86,22 @@ export default {
 </script>
 
 <style scoped>
+.background {
+  background-color: rgba#C9E8FC;
+  min-height: 100%; 
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center; 
+}
+
 .create-post {
   padding: 40px;
-  background-color: #e8f4fc;
+  background-color: #fff;
   border-radius: 12px;
-  float:left;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 1000px; 
+  width: 1000px;
+  min-width: 100%; 
   margin: 50px auto;
 }
 
@@ -150,3 +162,4 @@ input[type="tel"]:focus {
   font-weight: bold;
 }
 </style>
+

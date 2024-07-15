@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Component1 from '../components/Component1.vue'
+
 import Burger from '../components/Burger.vue'
 export default {
   name: 'Banner',

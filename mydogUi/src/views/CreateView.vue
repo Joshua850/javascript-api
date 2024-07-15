@@ -1,45 +1,43 @@
 <template>
   <div class="createADog">
-    <div class="form-container">
-      <Component1 />
+    <Banner class="banner" />
+    <div class="content">
+      <div class="form-container">
+        <Create />
+      </div>
     </div>
-    <Burger class="burger" />
   </div>
 </template>
 
 <script>
-import Component1 from '../components/Component1.vue';
+
 import Burger from '../components/Burger.vue';
+import Banner from '../components/Banner.vue';
+import Create from '../components/Create.vue';
+
 
 export default {
   components: {
-    Component1,
+    Create,
     Burger,
+    Banner,
   },
 };
 </script>
 
 <style scoped>
 .createADog {
-  display: flex;
-  justify-content: center; 
-  align-items: flex-start; 
-  padding: 20px; 
+  
 }
 
-.form-container {
-  margin-right: 20px; 
+.banner {
+  width: 100%; /* Make the banner full-width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.burger {
-  width: 90px;
-  height: 50px; 
-  background-color: #007bff; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px; 
-  cursor: pointer; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+.content {
+
 }
+
+
 </style>
