@@ -89,8 +89,8 @@ export default {
   border-radius: 12px;
   float:left;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 1000px; /* Reduced max width for better centering */
-  margin: 50px auto; /* Centered using auto margins */
+  width: 1000px; 
+  margin: 50px auto;
 }
 
 h2 {

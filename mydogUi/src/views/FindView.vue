@@ -38,11 +38,11 @@ export default {
           throw new Error('Network response was not ok');
         }
         const result = await response.json();
-        this.data = result; // Store the fetched dog data
+        this.data = result; 
       } catch (err) {
-        this.error = err.message; // Handle any errors
+        this.error = err.message;
       } finally {
-        this.loading = false; // Update loading state
+        this.loading = false; 
       }
     },
   },
@@ -75,7 +75,7 @@ h2 {
 }
 
 .dog-list {
-  list-style-type: none; /* Remove default list style */
+  list-style-type: none; 
   padding: 0;
 }
 
@@ -94,7 +94,7 @@ h2 {
 }
 
 .dog-info {
-  text-align: center; /* Center align for better layout */
+  text-align: center; 
 }
 
 .dog-name {
@@ -104,17 +104,17 @@ h2 {
 }
 
 .dog-image {
-  width: 150px; /* Adjust as necessary */
+  width: 150px; 
   height: auto;
   border-radius: 4px;
-  margin-bottom: 10px; /* Space below the image */
+  margin-bottom: 10px;
 }
 
 .dog-age,
 .dog-breed,
 .dog-contact {
   color: #555;
-  margin: 5px 0; /* Slight margin for spacing */
-  font-size: 1em; /* Consistent font size */
+  margin: 5px 0; 
+  font-size: 1em; 
 }
 </style>

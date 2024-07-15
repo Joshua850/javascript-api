@@ -26,33 +26,33 @@ export default {
 <style scoped>
 #title{
   position: absolute;
-  top: 50%; /* Center vertically */
-  left: 70%; /* Center horizontally */
+  top: 50%; 
+  left: 70%; 
   bottom:10%;
-  transform: translate(-50%, -50%); /* Adjust for centering */
-  color: white; /* Text color */
-  text-align: center; /* Center align text */
-  z-index: 1001; /* Ensures text is above the image */
+  transform: translate(-50%, -50%); 
+  color: white; 
+  text-align: center; 
+  z-index: 1001; 
 }
 #banner {
   width: 100%;
-  height: 500px; /* Adjust height as needed */
+  height: 500px;
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensures the banner stays on top */
+  z-index: 1000; 
 }
 
 #banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the banner area */
+  object-fit: cover;
 }
 
 nav {
   position: absolute;
-  top: 10px; /* Adjust position as needed */
+  top: 10px; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;

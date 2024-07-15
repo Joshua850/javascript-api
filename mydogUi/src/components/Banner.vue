@@ -8,7 +8,7 @@
   export default {
     methods: {
       goHome() {
-        this.$router.push('/'); // Adjust the path according to your router setup
+        this.$router.push('/'); 
       },
     },
   };
@@ -16,7 +16,7 @@
   
   <style scoped>
   .banner {
-    background-color: #007bff; /* Change this to your preferred color */
+    background-color: #007bff; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -25,7 +25,7 @@
   }
   
   .banner:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3; /
   }
   
   .site-name {
