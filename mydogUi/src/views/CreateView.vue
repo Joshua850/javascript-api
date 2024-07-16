@@ -26,15 +26,9 @@ export default {
 </script>
 
 <style scoped>
-.createADog {
-  
-}
 
 .banner {
-  width: 100%; /* Make the banner full-width */
+  width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-
-
 </style>

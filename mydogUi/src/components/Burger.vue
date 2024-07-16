@@ -60,17 +60,17 @@
   
   .nav-menu {
     position: absolute;
-    top: 60px; /* Adjust to position below the burger */
-    right: 120px; /* Align with the burger */
-    background-color: rgba(0, 0, 0, 0.8); /* Background for the menu */
+    top: 60px; 
+    right: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 1001; /* Ensures menu is above other elements */
+    z-index: 1001;
     transition: transform 0.3s ease;
-    transform: translateX(100%); /* Start off-screen */
+    transform: translateX(100%);
   }
   
   .nav-menu a {
@@ -83,15 +83,15 @@
     text-decoration: underline;
   }
   
-  /* Show the menu when open */
+ 
   .nav-menu.active {
-    transform: translateX(0); /* Slide in */
+    transform: translateX(0); 
   }
   
   .close {
     cursor: pointer;
-    color: white; /* Color for close button */
-    text-align: right; /* Align close button to the right */
+    color: white;
+    text-align: right;
   }
   </style>
   
