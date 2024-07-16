@@ -100,8 +100,8 @@ export default {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 1000px;
-  min-width: 100%; 
+ 
+  min-width: 80%; 
   margin: 50px auto;
 }
 
@@ -148,7 +148,7 @@ input[type="tel"]:focus {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
-  width: 100%;
+  width: 20%;
 }
 
 .submit-button:hover {

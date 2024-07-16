@@ -69,7 +69,9 @@ const start = async () => {
     await mongoose.connect(
       "mongodb+srv://admin:admin@mydog.xdo3gql.mongodb.net/y"
     );
-    app.listen(3000, () => console.log("Server started on port 3000"));
+    app.listen(3000, "0.0.0.0", () =>
+      console.log("Server started on port 3000")
+    );
   } catch (error) {
     console.error(error);
     process.exit(1);

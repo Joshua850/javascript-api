@@ -1,4 +1,5 @@
 <template>
+  <div id="main">
   <div id="banner">
     <Burger></Burger>
     <img src="@/assets/stock.jpg" alt="Banner Image">
@@ -10,6 +11,7 @@
 <h2>Regester Search Recover</h2>
 
   </div>
+</div>
 </template>
 
 <script>
@@ -24,6 +26,13 @@ export default {
 </script>
 
 <style scoped>
+#main{
+  height: 100vh;
+  width:100%;
+  padding: 0px;
+  background-color: #C9E8FC;
+}
+
 #title{
   position: absolute;
   top: 50%; 

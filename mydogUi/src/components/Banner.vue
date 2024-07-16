@@ -23,6 +23,7 @@ export default {
   background-color: #C9E8FC;
   color: white;
   padding: 20px;
+  right:50%;
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -43,6 +44,6 @@ export default {
   align-items: center;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
 }
 </style>

@@ -8,7 +8,7 @@
       <nav v-if="isOpen" class="nav-menu">
        
         <router-link to="/create" @click="toggleMenu">Create</router-link>
-        <router-link to="/" @click="toggleMenu">home</router-link>
+        <router-link to="/" @click="toggleMenu">Home</router-link>
         <router-link to="/find" @click="toggleMenu">Find</router-link>
       </nav>
     </div>
@@ -31,6 +31,7 @@
   
   <style scoped>
   .burger {
+    padding:20px;
     position: absolute;
     right: 20px; /* Adjust position */
     cursor: pointer;
